@@ -8,7 +8,7 @@
 <div id="padlo"></div>
 </body>
 <script>
-    const gravitacio = 0.1;
+    const gravitacio = 0.2;
     const padloMagassag = 50;
     const hulkMeret = 0.2;
     const hulkWidth = 830 * hulkMeret;
@@ -61,9 +61,9 @@
         if (event.keyCode == '38') { // fel
             if (hulkY + hulkHeight == window.innerHeight - padloMagassag) {
                 if (hulkAtvaltozva) {
-                    hulkSebessegY = 10;
+                    hulkSebessegY = 15;
                 } else {
-                    hulkSebessegY = 4;
+                    hulkSebessegY = 6;
                 }
             }
         } else if (event.keyCode == '37') { // balra
