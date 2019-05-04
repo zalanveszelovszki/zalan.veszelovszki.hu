@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zalan teszt</title>
+</head>
+<body>
+<div id="hulk"></div>
+<div id="padlo"></div>
+</body>
+<script>
+    const gravitacio = 0.1;
+    const padloMagassag = 50;
+    const hulkMeret = 0.2;
+    const hulkWidth = 830 * hulkMeret;
+    const hulkHeight = 994 * hulkMeret;
+    let mozgas = 1;
+    let hulkX = 0;
+    let hulkY = 0;
+    let hulkSebessegY = 0;
+    let hulkAtvaltozva = false;
+
+    setup();
+
+    setInterval(loop, 1000 / 60);
+
+    function allitsdbeHulkot() {
+        const hulk = document.getElementById('hulk');
+        if (hulkAtvaltozva) {
+            hulk.style.backgroundImage = 'url("hulk.png")';
+        } else {
+            hulk.style.backgroundImage = 'url("bruce.png")';
+        }
+        hulk.style.backgroundPosition = 'center';
+        hulk.style.backgroundRepeat = 'no-repeat';
+        hulk.style.backgroundSize = '110% 110%';
+        hulk.style.position = 'absolute';
+        hulk.style.width = hulkWidth + 'px';
+        hulk.style.height = hulkHeight + 'px';
+    }
+
+    function setup() {
+        allitsdbeHulkot();
+
+        /* Padlo beallitasok */
+        const padlo = document.getElementById('padlo');
+        padlo.style.backgroundImage = 'url("csempe-kapitany.jpg")';
+        padlo.style.backgroundRepeat = 'repeat';
+        padlo.style.position = 'absolute';
+        padlo.style.height = padloMagassag + 'px';
+        padlo.style.bottom = 0;
+        padlo.style.left = 0;
+        padlo.style.right = 0;
+
+        /* Billentyu kezeles */
+        window.onkeydown = lenyomtakEgyBillentyut;
+    }
+
+    function lenyomtakEgyBillentyut(event) {
+        const hulk = document.getElementById('hulk');
+
+        if (event.keyCode == '38') { // fel
+            if (hulkY + hulkHeight == window.innerHeight - padloMagassag) {
+                if (hulkAtvaltozva) {
+                    hulkSebessegY = 10;
+                } else {
+                    hulkSebessegY = 4;
+                }
+            }
+        } else if (event.keyCode == '37') { // balra
+            if (hulkAtvaltozva) {
+                hulkX = hulkX - 20;
+            } else {
+                hulkX = hulkX - 10;
+            }
+        } else if (event.keyCode == '39') { // jobbra
+            if (hulkAtvaltozva) {
+                hulkX = hulkX + 20;
+            } else {
+                hulkX = hulkX + 10;
+            }
+        } else if (event.code == 'Space') {
+            if (hulkAtvaltozva) {
+                hulkAtvaltozva = false;
+            } else {
+                hulkAtvaltozva = true;
+            }
+            allitsdbeHulkot();
+        }
+
+    }
+
+    function loop() {
+        /* Szamolas */
+        hulkY = hulkY - hulkSebessegY;
+        hulkSebessegY = hulkSebessegY - gravitacio;
+
+        if (hulkY + hulkHeight > window.innerHeight - padloMagassag) {
+            hulkSebessegY = 0;
+            hulkY = window.innerHeight - padloMagassag - hulkHeight;
+        }
+
+        /* Rajzolas */
+        const hulk = document.getElementById('hulk');
+        hulk.style.left = (hulkX + mozgas) + "px";
+        hulk.style.top = hulkY + "px";
+    }
+
+
+</script>
+</html>
