@@ -9,6 +9,8 @@
     #jatek {
   margin-left: 50px;
   margin-top: 20px;
+  width: 485px;
+  height: 402px; 
 	  }
 #zold {
   position: absolute;
@@ -27,7 +29,7 @@ margin-left: 130px;
   top: 50%;
   left: 50%;
   margin-left: -352.5px; 
-  margin-top: -352.5px;
+  margin-top: -251px;
 }
    #elso {
 list-style: none;
@@ -41,41 +43,101 @@ float: right;
 margin-top: 60px;
 margin-right: 10px;
 	  }
-	  .szoveg {
-	  margin-right: 1300px;
+	  .masik{
+	    width: 100px;
+	    height: 100px;
+		  }
+	  .ikon {
+	    width: 100%;
+	    height: 100%;
+	  }
+	  		  .ikon img {
+		  width: 100px;
+			  height: 100px;
+		  }  
+	  @media (max-width: 1080px) {
+	      #jatek {
+  margin-left: 25px;
+  margin-top: 10px;
+  width: 242.5px;
+  height: 201px; 
+	  }
+#zold {
+  position: absolute;
+width: 292.5px;
+height: 221px;
+margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 15px;
+  background-color: green;
+}
+#kek {
+  background-color: DarkCyan;
+  position: absolute;
+  width: 422.5px;
+  height: 251px;
+  top: 50%;
+  left: 50%;
+  margin-left: -211.25px; 
+  margin-top: -125.5px;
+}
+   #elso {
+list-style: none;
+float: left;
+margin-top: 30px;
+margin-left: -30px;
+}
+  #masodik {
+list-style: none;
+float: right;
+margin-top: 30px;
+margin-right: 5px;
+	  }
+		  .masik{
+		    width: 50px;
+		    height: 50px;
+		  }
+		  	  .ikon {
+	    width: 100%;
+	    height: 100%;
+	  }
+		  .ikon img {
+		  width: 50px;
+			  height: 50px;
+		  }  
 	  }
   </style>
 <body>
   <div id="kek">
 			<ul id="elso">
 				<li>
-          <p><a href="dobalos.html"><img src="Basketball.jpeg" alt="Ball"width="100px" height="100px"/></a></p>
+                                        <p class="masik"><a class="ikon" href="nyancat.html"><img src="nyan-cat.jpg"alt="NyanCat"/></a></p>
 				</li>
 				<li>
-					<p><a href="tictactoe.html"><img src="TicTacToe.png" alt="TicTacToe"width="100px" height="100px"/></a></p>
+					<p class="masik"><a class="ikon" href="tictactoe.html"><img src="TicTacToe.png"alt="TicTacToe"/></a></p>
 				</li>
-				<li>
-					<p><a href="nyancat.html"><img src="nyan-cat.jpg" alt="NyanCat"width="100px height="100px"/></a></p>
+				<li> 
+					<p class="masik"><a class="ikon" href="dobalos.html"><img src="Basketball.jpeg"alt="Ball"/></a></p>
 				</li>
             </ul>
 						<ul id="masodik">
 				<li>
           
-					<p><a href="readygofish.html"><img src="fish.png" alt="ReadyGoFish"width="100px" height="100px"/></a></p>
+					<p class="masik"><a class="ikon" href="contralia.html"><img src="Contralialogo.png"alt="Contralia"/></a></p>
 				</li>
 				<li>
-					<p><a href="contralia.html"><img src="Contralialogo.png" alt="Contralia"width="100px" height="100px"/></a></p>
+					<p class="masik"><a class="ikon" href="drawgame.html"><img src="drawgame.jpg"alt="DrawGame"/></a></p>
 				</li>
 				<li>
-					<p><a href="drawgame.html"><img src="drawgame.jpg" alt="DrawGame"width="100px" height="100px"/></a></p>
+					<p class="masik"><a class="ikon" href="readygofish.html"><img src="fish.png" alt="ReadyGoFish"/></a></p>
 				</li>
             </ul>
   <div id="zold">
-<iframe id="jatek" src="https://scratch.mit.edu/projects/319134512/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe id="jatek" src="https://scratch.mit.edu/projects/319134512/embed" allowtransparency="true"frameborder="0" scrolling="no" allowfullscreen></iframe>
   </div>
-  </div> 
-<p class="szoveg">Dobj a kockákkal és vállasz a kockák közül taktika szerint (de a nagyokat éri meg), ha rányomsz egy kockára akkor azt és minden ugyanolyan kocka (egy, kettőhárom, négy, öt és kukac) sárgára vált és amennyi a kockákon lévő számok összege annyi potod lesz pl:ha egy négyes kockára rányomsz akkor minden másik kocka amivel négyest dobtál sárga (nem tudsz velük már dobni) lesz és annyiszor négy pontod lesz ahány négyest dobtál(a kukac öt pontot ér). Ezt addig tudod csinálni amíg nem lesz minden kockád sárga. Ha egyszer kiválasztottál már egy megadott számot akkor azt töbször nem teheted meg abban a körödben. Ha több, vagy ugyanannyi pont van kockáidon (amennyit dobtál vele annyi pontot ér) mint ami egy fent lévő dominón található akkor kiveheted azt a dominót, de csak akkor ha van kukacod a kockákon, ezért ha kukacot dobsz ajánlott azt kiválasztani (ilyenkor kattints arra a pályán lévő dominóra). Lehet egymástól lopni is dominót de csak ha pont annyi pontod van a kockákon amennyi az ellenfél legfelső dominóján (ilyenkor kattints az ellenfél dominójára). Ha egy körben nem szerzel dominót (elfogytak a kockák amivel dobhatsz) elveszted a legfelső dominód és a legnagyobb dominó elveszik a pájáról (nem lehet megszerezni). Akár szereztél akár vesztettél akár loptál dominót nyomj a következő játékos gombra és a másik ember következik (azaz egy körben csak egy dolgot csinálhatsz). A játék célja hogy minél több kukacod legyen (ahány kukac van a dominódon annyit ér). Akinek több kukaca lesz amikor elfogynak a dominók a pájáról az nyer.</p>
-<h1 class="szoveg">FONTOS</h1>
-<p class="szoveg">Ha a következő játékos jön mert megszereztél egy dominót vagy elfogytak a kockáid, esetleg loptál a másik játékostól akkor nyomj a következő játékos gombra és mielőtt a másik játékos választ dobjon egyszer különben összezavarodik a rendszer, megpróbálom kijavítani a hibát. A játék két személyes. Ez egy létező társas úgyhogy a hülye szabájokért nem engem hibáztatni. :D</p>
-</body>
+  </div>
+	<p>Dobj a kockákkal és vállasz a kockák közül taktika szerint (de a nagyokat éri meg), ha rányomsz egy kockára akkor azt és minden ugyanolyan kocka (egy, kettőhárom, négy, öt és kukac) sárgára vált és amennyi a kockákon lévő számok összege annyi potod lesz pl:ha egy négyes kockára rányomsz akkor minden másik kocka amivel négyest dobtál sárga (nem tudsz velük már dobni) lesz és annyiszor négy pontod lesz ahány négyest dobtál(a kukac öt pontot ér). Ezt addig tudod csinálni amíg nem lesz minden kockád sárga. Ha egyszer kiválasztottál már egy megadott számot akkor azt töbször nem teheted meg abban a körödben. Ha több, vagy ugyanannyi pont van kockáidon (amennyit dobtál vele annyi pontot ér) mint ami egy fent lévő dominón található akkor kiveheted azt a dominót, de csak akkor ha van kukacod a kockákon, ezért ha kukacot dobsz ajánlott azt kiválasztani (ilyenkor kattints arra a pályán lévő dominóra). Lehet egymástól lopni is dominót de csak ha pont annyi pontod van a kockákon amennyi az ellenfél legfelső dominóján (ilyenkor kattints az ellenfél dominójára). Ha egy körben nem szerzel dominót (elfogytak a kockák amivel dobhatsz) elveszted a legfelső dominód és a legnagyobb dominó elveszik a pájáról (nem lehet megszerezni). Akár szereztél akár vesztettél akár loptál dominót nyomj a következő játékos gombra és a másik ember következik (azaz egy körben csak egy dolgot csinálhatsz). A játék célja hogy minél több kukacod legyen (ahány kukac van a dominódon annyit ér). Akinek több kukaca lesz amikor elfogynak a dominók a pájáról az nyer.</p>
+	<h1>FONTOS</h1>
+	<p>Ha a következő játékos jön mert megszereztél egy dominót vagy elfogytak a kockáid, esetleg loptál a másik játékostól akkor nyomj a következő játékos gombra és mielőtt a másik játékos választ dobjon egyszer különben összezavarodik a rendszer, megpróbálom kijavítani a hibát. A játék két személyes. Ez egy létező társas úgyhogy a hülye szabájokért nem engem hibáztatni. :D</p>
+    </body>
 </html>
