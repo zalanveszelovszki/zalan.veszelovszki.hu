@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Esküvői weboldal</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&family=Muli&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-favicon.png">
+</head>
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+h1,h2,h3,
+ul,ol,
+p,
+img {
+    margin-bottom: 1.5rem;
+}
+
+body {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png') repeat center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #444349;
+}
+
+.hely,
+.program,
+.ajandekok,
+.kerdesek,
+.elerhetosegek {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: 'Great Vibes', cursive;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+
+a:hover {
+  color: #eda087;
+  transition: color .15s ease-in-out;
+}
+body {
+color: #444349;
+}
+
+header {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat 70% center/cover;
+  display: table;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+.header2 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.header {
+  margin: 0 auto;
+  padding: .625rem;
+  color: hsla(0,0%,100%,.9);
+  background: hsla(100,0%,0%,.5);
+}
+
+.focim {
+  font-size: 3.15rem;
+  color: #d2ba87;
+  margin-bottom: 0;
+}
+
+.udvozlo {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+}
+
+.udvozlo::after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+
+.datum {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+  vertical-align: middle;
+}
+
+.datum::before,
+.datum::after {
+  display: inline-block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 .5rem;
+}
+.blurb img {
+  height: 7.5rem;
+}
+
+.blurb h3 {
+  font-weight: 700;
+}
+
+.blurb div {
+  font-family: 'Muli', sans-serif;
+}
+
+
+.blurb::after {
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 25vw;
+  margin: 1.5rem auto;
+  background-color: #444349;
+}
+.program {
+  width: 100vw;
+  text-align: left;
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+  font-family: 'Muli', sans-serif;
+}
+
+.program h2 {
+  font-family: 'Great Vibes', cursive;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.program p {
+  font-style: italic;
+}
+
+.program p {
+  letter-spacing: .025rem;
+}
+
+.ajandekok img {
+  height: 7.5rem;
+}
+
+.ajandekok p:last-child {
+  margin-bottom: 0;
+}
+.kerdesek {
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+  width: 100vw;
+  text-align: center;
+}
+
+.kerdesek h2 {
+  margin-top: 1rem;
+}
+
+.kerdesek p {
+  font-family: 'Muli', sans-serif;
+  text-align: left;
+}
+
+.kerdes::after {
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background-color: #d2ba87;
+}
+
+.ker {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.val {
+  margin-bottom: 1.5rem;
+}
+footer {
+  height: 10vh;
+  width: 100vw;
+  background-color: #606060;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: table;
+  text-align: center;
+  font-size: .875rem;
+}
+
+.szoveg {
+  display: table-cell;
+  vertical-align: middle;
+  padding: .5rem 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer small {
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+
+  header {
+    background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat center/cover;
+  }
+
+}
+
+...
+
+@media (min-width: 768px) {
+
+  .header {
+    padding: 1.25rem;
+    border-radius: 4px;
+    width: 50%;
+  }
+
+  .header h1 {
+    font-size: 7rem;
+  }
+
+}
+
+...
+
+@media (min-width: 768px) {
+
+  .udvozlo {
+    text-transform: uppercase;
+  }
+
+}
+@media (min-width: 768px) {
+
+  .blurb {
+    display: inline-block;
+    width: 30%;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+
+  .blurb::after {
+    display: none;
+  }
+
+}
+@media (min-width: 768px) {
+
+  .jaja {
+    width: 30vw;
+    margin: 0 auto;
+  }
+
+}
+@media (min-width: 768px) {
+
+  .kerdes {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+
+  .kerdes::after {
+    display: none;
+  }
+
+  .kerdes h3 {
+    text-align: left;
+  }
+
+}
+@media (min-width: 768px) {
+
+  footer {
+    min-height: 7vh;
+  }
+
+}
+</style>
+<body>
+<header>
+  <div class="header2">
+    <div class="header"> 
+  <div class="udvozlo">Összeházasodunk!</div>
+  <h1 class="focim">Zoe &#38; Alex</h1>
+  <div class="datum">Augusztus 1, 2018</div>
+    </div>
+  </div>
+    </header>
+  <div class="mindenkb">
+  <div class="hely"><h2>Helyszín</h2>
+    <div class="blurb">
+    <h3 class="ceremonia">Ceremónia:</h3>
+    <img class="kepek" src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-ceremony.png">
+    <div>
+Szent Miklós templom, Szentháromság tér 2, Budapest</div>
+    </div>
+    <div class="blurb">
+    <h3 class="kep">Képek:</h3>
+        <img class="kepek" src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-photoshoot.png"><div>Szabadság Bástya, 23 
+Bölcsesség út, Budapest</div>
+    </div>
+    <div class="blurb">
+    <h3 class="buli">Lagzi:</h3>
+    <img class="kepek" src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-party.png"><div>Heaven Lounge, Tündér utca 14, Budapest</div>
+  </div>
+  </div>
+  <div class="program"><h2>Program</h2>
+    <div class="jaja">
+      <h2 class="udvozlo">"Valahogy így lesz, ez biztos."</h2></div>
+    <p class="ido">13:45 – Esküvői Ceremónia<br> 14:30 – Képek<br> 16:00 – Koktélozás<br> 18:00 – Dinner <br>22:00 – Torta <br>...<br> 4:00 – Táncolás hajnalig</p>
+  </div>
+  <div class="ajandekok"><h2>Ajándékok</h2>
+    <p class="udvozlo">A legnagyobb ajándék az, hogy megjelensz</p>
+    <img class="kepek" src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-gifts.png">
+    <p>Kérlek gyere el és érezd jól magad velünk.</p>
+  </div>
+  <div class="kerdesek"><h2>Kérdések és Válaszok</h2>
+    <div class="kerdes, utazas-es-szallas"><h3>Utazás és Szállás</h3>
+      <p class="ker">Lesz valamilyen szervezett átutazás?</p><p class="val">
+      Nem, csak 13:15 órakor találkozunk a templomban.
+      </p><p class="ker">
+      Hol tudok parkolni?</p><p class="val">
+      A parkolás az 1. kerületben hétvégén ingyenes. A helyszínek közel vannak egymáshoz, így nincs szüksége autójára.
+      </p><p class="ker">
+      Hogyan tudok hazaérni éjjel?</p><p class="val">
+      A 916-os busz egész éjjel üzemel a kastélyban, és eléri a város minden nagyobb forgalmi csomópontját.
+      </p>
+    </div>
+    <div class="kerdes, etel-es-unnepseg"><h3>Étel és Ünnepség</h3>
+      <p class="ker">
+Szeretnék valamiféle meglepetést csinálni nektek, a partira. Kinek kellene beszélnem erről?</p><p class="val">
+      Beszélje meg Abigail Smith-el. Csak küldj neki egy e-mailt az abigail@awesomemail.com címre.
+</p><p class="ker">
+      Mit vegyek fel? Van öltözködési szabály?</p><p class="val">
+      Viselj azt, ami kényelmes. Ha ez segít az intelligens, alkalmi / üzleti alkalmi nők számára, és az intelligens alkalmi / informális nők számára, akkor ez tökéletes lehetőség.
+      </p><p>
+      Szeretnék valamilyen különleges ételt (gluténmentes, laktózmentes, vegán stb.)
+      </p>
+    </div>
+    <div class="kerdes, egyeb-apro-dolgok"><h3>Egyéb apró dolgok</h3>
+      <p class="ker">Van egy problémám / kérdésem az esküvő napjával kapcsolatban. Kivel beszélhetek?</p><p class="val">
+      Jared Wright ezen a számon elérhető: +36 30 000 0000.
+      </p><p class="ker">
+      Hozhatunk gyerekeket?</p><p>
+      Igen! Terveztük számukra játéksarkot / édességet.</p>
+<p class="ker">
+  Mit gondolsz a kutyákról? Hozhatok a sajátom?</p><p class="val">
+      Szeretjük a kutyákat, és abszolút magaddal hozhatod a tiédet. A Heaven Lounge kutyabarát hely.
+      </p>
+  </div>
+    </div>
+  <div class="elerhetosegek"><h2>Elérhetőségek</h2>
+    <p>
+      Ha bármilyen kérdése van, kérjük, hívjon / írjon nekünk.</p>
+    <p> telefon (Zoe): +36 30 000 0000<br>
+    telefon (Alex): +36 30 000 0000<br>
+      email: zoeandalex@awesomemail.com</p>
+  </div>
+  <footer>
+    <div class="szoveg">
+      <p><small>Készült ♥-vel Budapesten ©2018 | Ikonok <a href="http://www.flaticon.com/authors/becris" title="Becris">Becris</a> (<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>)</small></p>
+  </footer>
+</body>
+</html>
