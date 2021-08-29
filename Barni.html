@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+  <script>$(document).ready(function(){
+  $("h1").mouseenter(function() {
+    $(this).html("D<strong>e</strong> <em>i</em><u>g</u><b>e</b><a>n</a>");
+  });
+  $("h1").mouseleave(function() {
+    $(this).html("Vagy mégsem?");
+  });
+});
+  </script>
+  <style="text/css">
+    h1 {
+  text-align: center;
+  color: red;
+  background-color: grey;
+}
+strong {
+  color: orange;
+}
+em {
+  color: yellow;
+}
+u {
+  color: green;
+}
+b {
+  color: blue;
+}
+a {
+  color: purple;
+}
+
+  </style>
+<body>
+<h1>A Barni nem teljesen buzi.</h1>
+</body>
+</html>
