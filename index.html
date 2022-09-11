@@ -44,7 +44,7 @@
 		 }
 		 #fix {
 		 	width: 100vw;
-		 	height: 12vh;
+		 	height: 8vh;
 		 	background-color: #e6e6ff;
 		 	position: fixed;
                  	top: 0px;
@@ -55,8 +55,7 @@
 		 	height: 5vh;
 		 }
 		 }
-		 button {
-		 	font-size: 30px;
+		 .close {
 		 	float: right;
 		 }
 		 footer {
@@ -69,6 +68,7 @@
 		 .cookies {
 			 font-size: 20px;
 			 color: grey;
+			 left: 0px;
 			 
 	</style>
 <body>
@@ -91,7 +91,7 @@
 		<h1 class="bal">Hello There</h1>
 	</div>
 				<footer>
-					<button>x</button>
+					<span class="close" onclick="this.parentNode.parentNode.remove(); return false;">x</span>
 					<p class="cookies">Ez a weboldal nem használ sütiket de azért ki írtam ezt me mé ne.</p>
 				</footer>
 </body>
