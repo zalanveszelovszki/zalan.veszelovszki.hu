@@ -55,12 +55,21 @@ a {
   h2 {
     color: darkred;
   }
+  a {
+  text-decoration: none;
+  }
+  .div:hover > a {
+  opacity: 0.3;
+  }
+  .div:hover > a:hover {
+  opacity: 1;
+  }
 </style>
 <body>
   <h1>Czigány kft.</h1>
   <div class="cig_main">
     <h2>Na Csumász!</h2>
-    <p>Infók rólunk: <a href="Czigány kft.pptx" download>Czigány kft PPT</a></p>
+    <p>Infók rólunk: <div class='div'><a href="Czigány kft.pptx" download>Czigány kft PPT</a></div></p>
     <iframe width="560" height="315" src="https://youtube.com/embed/CimVDgHf9UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  <table>
       <tr>
@@ -85,8 +94,8 @@ a {
     </table>
     <p class="nigg">elérhetőségek:</p>
     <div class="cont">
-    <p class="right"><a href="https://open.spotify.com/user/ikfr5jcm76ada17t7sj80dog9">spotify: Zsupabols</a></p>
-    <a href="https://mail.google.com/mail/u/0/?zx=isy9jae9zlf#inbox?compose=DmwnWsCSnNVlsFcGvBZMKjqTFkhcbPtQXQJcmccDmDXNBQWVcPBrlPzkzgKklknXddgNWxDNckzG">ügyfélszolgálat: Czigany.kft@gmail.com</a>
+    <p class="right"><div class='div'><a href="https://open.spotify.com/user/ikfr5jcm76ada17t7sj80dog9">spotify: Zsupabols</a></div></p>
+    <div class='div'><a href="https://mail.google.com/mail/u/0/?zx=isy9jae9zlf#inbox?compose=DmwnWsCSnNVlsFcGvBZMKjqTFkhcbPtQXQJcmccDmDXNBQWVcPBrlPzkzgKklknXddgNWxDNckzG">ügyfélszolgálat: Czigany.kft@gmail.com</a></div>
     </div>
     <img src="https://m.blog.hu/mo/mover/image/Kabellopas2.jpg">
     <img src="https://i0.wp.com/foter.ro/wp-content/uploads/2022/03/sinlopas.jpg?w=800&ssl=1">
