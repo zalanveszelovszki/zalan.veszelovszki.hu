@@ -59,6 +59,43 @@ a {
   h2 {
     color: darkred;
   }
+  /* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+  .cig_main {
+    width: 90vw;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  iframe {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/* Styles for screens larger than 600px */
+@media (min-width: 601px) {
+  h1 {
+    font-size: 80px;
+  }
+  .cig_main {
+    width: 80vw;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  iframe {
+    width: 560px;
+    height: 315px;
+  }
+  img {
+    width: 350px;
+  }
+}
+
 </style>
 <body>
   <h1>Czigány kft.</h1>
