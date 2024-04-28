@@ -106,6 +106,11 @@ table {
       width: 100%;
       height: auto;
       max-width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      position:relative;
     }
     p {
       line-height: 66px;
@@ -140,17 +145,23 @@ table {
       font-size: 60px;
       padding-top: 30px;
       padding-bottom: 40px;
+      line-height: 70px;
       font-family: 'Lemon/Milk', sans-serif;
+    }
+    #button {
+      font-size: 60px;
+      padding-top: 30px;
+      padding-bottom: 40px;
     }
     a {
       text-align:right;
       padding-right: 50px;
       column-rule: white;
       text-decoration: none;
-      font-size: 60px;
+      font-size: 40px;
       display: block;
-      padding-bottom: 20px;
-      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-top: 10px;
       border-bottom: solid 1px grey;
     }
     a, a:visited, a:hover, a:active {
@@ -196,10 +207,16 @@ table {
       cursor: pointer;
     }
     .list {
-      width: 50%;
+      width: 100%;
+      min-width: 400px;
+      position: absolute;
+    }
+    .inner {
+      text-align: center;
+      width: 30%;
+      min-width: 400px;
       float: right;
       background-color: #3b444d;
-      display: inline-block;
     }
     @media (max-width: 758px) {
       h1 {
@@ -233,7 +250,7 @@ table {
       padding-top: 50px;
       padding-bottom: 50px;
     }
-    h3 {
+    h3, #button {
       font-size: 25px;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -276,19 +293,27 @@ table {
     }
     .list {
       width: 100%;
+      min-width: 0px;
+      position: relative;
+      background-color: #3b444d;
+    }
+      .inner {
+      min-width: 0px;
+      text-align: center;
+      width: 100%;
     }
   </style>
 <body>
 <header id="callout" data-closable><div class="head">
   <img class="logo" src="https://uc4ae59283a8c84eb3e0361a29a3.previews.dropboxusercontent.com/p/thumb/ACTV0FKzohJjYfMAF1fJSPVV0zsxf_A8hT4tqHv_qtHhADStwK7XNaxvs6hXIJ5rM1HPM_PSjglBoHdK-oQ3Hh19xvkaxe3IDXzCDQEl75B7_U5CVHEBbNFaJ589UVO1L1UN_XqzNkYJtZhYVaEY8QhG50BTxLur-ZwHQD3HtYtqa-3zGMwNtfPkFaeOQIT-kVhhdPgh50zTaNROzY-uGRy2yqgnCMu15o5aaAnlER4R00Q5oME_RD6-UfMSB_S1knHi4K4pTEHp-x_8XF93LcvaRQINPVTx0hbAzpaxFDoTp3zQAlb7MeN77ixzEjt7IUQfouEialDTicMqVC0W0xLp/p.png">
-    <span onclick="myFunction()" id="button"><h3>&times;</h3></span>
+    <span onclick="myFunction()" id="button">&times;</span>
   <div id="lines" onclick="myFunction2()">  
   <div class="hamburger"></div>
     <br>
     <div class="hamburger"></div>
     <br>
-    <div class="hamburger"></div></div></div>
-  <div class="list" id ="myDIV">
+    <div class="hamburger"></div></div></div></header>
+  <div class="list" id ="myDIV"><div class="inner">
     <a href="#int" class="scroll">Bemutatkozás</a>
     <a href="#future" class="scroll">Jövőkép</a>
     <a href="#story" class="scroll">Történetünk</a>
@@ -298,24 +323,23 @@ table {
     <a href="#sponsor" class="scroll">Támogatások</a>
     <a href="#RIK" class="scroll">RIK Kiadó</a>
     <a href="#donate" class="scroll">Adományok</a>
-    <a href="#SIRIK" class="scroll">SIRIK-fon</a></div>
-  </header>
+    <a href="#SIRIK" class="scroll">SIRIK-fon</a></div></div>
   <img class="img" src="https://ucfbca5a3455bd38dd983bd981c4.previews.dropboxusercontent.com/p/thumb/ACQXRqqJusNjQ77eBm6nN0FiFrKxhfXw5TvIr9H8gg-EvsSGTfBc8JAM53QufMlzpuLMze7ZSFWfOsuDfmEj7nCbIbOyxG_NaWGFoeHhfOWx1H5p2hJqZL73Uq4U-gULiWacvOJAidjZAUODvJ11uEA4BIarbUaZ02j1tJVsqA5HlrSiF9qTq2KG6p3tARnztCwcDUwJsgt7EkEKD6fyWcm9KKiAWYweo-R_u734XvsuVk0kM8y6xhILKNXivCTORPTspgsLlT-Wm0nri3_tAGNnGXDFOHcqDjzbVLO3MeCgOFaRUgzrPSnKxVChcKKlprkgYV_zyyCUGDqrWIuRFywbSNb4hKaDWDBBFAjYNfY7tQ/p.jpeg">
   <div class="back">
   <h2 id="int">Bemutatkozás</h2>
   <p>A Steinmetz Imre Rehabilitációs és Integrációs Központ, a közép-európai régió elsőként megnyíló, felnőttek számára kialakított integrációs intézménye 2029-ben kezdte meg tevékenységét és immár öt éve működteti az országban és a régióban egyaránt egyedülálló programját. Ingyenes, önkéntes alapon igénybevehető, közcélú programjának lényege, hogy felkészítse képzést elvégzőket a stabil családi környezet kialakítására, segítse őket a harmonikus családi működéshez szükséges szerepek elsajátításában és eszközöket adjon nekik ahhoz, hogy megtalálják helyüket a nemzeti közösségben és konstruktívan járuljanak hozzá annak működéséhez. A Központ tárt kapukkal várja a Kárpát-medence teljes területéről érkezőket, és nyújt segítséget mindenkinek válogatás nélkül.<br><br>
 A Steinmetz Imre Rehabilitációs és Integrációs Központ tudásközpontként is működik: az intézet alapítója, Dr. Steinmetz Imre által kidolgozott módszer hatásmechanizmusát és eredményességét folyamatosan kutatja és kvantifikálja, hatását különböző személyiségtípusok és közösségek esetében vizsgálja és fejleszti tovább. Az intézet könyvkiadója egyaránt jelentet meg népszerű, a módszer alapjait és eredményeit ismertető műveket az érdeklődő laikusok számára és publikálja a módszertanba részletesebb szakmai betekintést nyújtó tudományos munkákat.
 </p>
-  </div>
+  </div><img class="img" src="https://uc0de6c61add8bc93044c11da3a1.previews.dropboxusercontent.com/p/thumb/ACTRM4nlDa80QffkR0E8Gl3rCDev6VgBgH6ibUJkD75195glzofSYtsY-yYlk1KduIq3I9kkcfCb9c97Yl0W62NTJNdPNVgeuF8iI5nBifBZp6EG6mRf3KIU6Mt1ZlfNga6W6ZIxlZbfGuMHkshLD66oFWauHKHF2o7N6yGQqKGI3KicSwzETiP0GvW7kAM-cKj7GImIC8wYUIZ-n0bTR_XdWeV8eAWNsdcn-N6KpMDMUXULo4WfM00lI0ob6Vr0ENZX180Z8-iXtkW6vH6avjs4juD8BUPhXUtb6V_3NrDnCp_wr-8fC1cPsPaBQf-Y8jX8_fb9ihgUibQjopqp-h347N5pt5Q_sWuDc7ZSC7zgZA/p.jpeg">
   <div class="back">
-    <img class="img" src="https://uc0de6c61add8bc93044c11da3a1.previews.dropboxusercontent.com/p/thumb/ACTRM4nlDa80QffkR0E8Gl3rCDev6VgBgH6ibUJkD75195glzofSYtsY-yYlk1KduIq3I9kkcfCb9c97Yl0W62NTJNdPNVgeuF8iI5nBifBZp6EG6mRf3KIU6Mt1ZlfNga6W6ZIxlZbfGuMHkshLD66oFWauHKHF2o7N6yGQqKGI3KicSwzETiP0GvW7kAM-cKj7GImIC8wYUIZ-n0bTR_XdWeV8eAWNsdcn-N6KpMDMUXULo4WfM00lI0ob6Vr0ENZX180Z8-iXtkW6vH6avjs4juD8BUPhXUtb6V_3NrDnCp_wr-8fC1cPsPaBQf-Y8jX8_fb9ihgUibQjopqp-h347N5pt5Q_sWuDc7ZSC7zgZA/p.jpeg">
+    
     <h2 id="future">Jövőkép</h2>
     <p>A Steinmetz Imre Rehabilitációs és Integrációs Központ (SIRIK) fél évtizede foglalkozik a teljes társadalmat érintő integrációs problémák orvosolásával. A segítségre szorulók támogatása és számukra az új életlehetőségek megnyitása a nemzet alapvető érdeke és közös kötelességünk.<br><br>
 A Központ és annak tagintézményei a 1253/2027. évi Kormányrendelet alapján évente progresszíven növekedő támogatásban részesülnek a központi költségvetésből, melynek segítségével egyre bővülő kapacitással és magas szakmai minőségben tudják folytatni tevékenységüket, ami az egész kárpát-medencei magyarság javát szolgálja.
 A SIRIK működése és missziója független és jól elkülöníthető mind a közoktatási, mind az egyéb céllal működő korrekciós intézményektől – a programon történő részvétel önkéntes és egyéni elköteleződésen alapul, a képzés ötvözi a hagyományos edukációs, egyéni és csoportos módszereket a képességek és ismeretek minél átfogóbb és hatékonyabb fejlesztése érdekében.
 2034-ben – a fővárosban működő, nagykorú résztvevőket fogadó Központ mellett – az ország teljes területén hét testvérintézmény foglalkozik fiatalok és kiskorúak számára történő segítségnyújtással. A 2035-2040-es költségvetési tervben további 3 felnőttképzési és 10, fiatalok és kiskorúak számára elérhető központ nyitása szerepel, melyek segítségével földrajzilag is közelebb kerül a segítség azokhoz, akiknek erre szüksége van, illetve a határon túli közösségek számára is közvetlenül elérhetővé válik a képzés. 2040-re a SIRIK és a kapcsolódó intézetek fogják alkotni a legkiterjedtebb földrajzi lefedettséggel működő rehabilitációs intézményhálózatot a régióban, az összmagyarság jólétének és boldogulásának szolgálatában.
-    </p></div><div class="back">
-  <img class="img" src="https://uc25d6bcb92352464e91f4ce4a21.previews.dropboxusercontent.com/p/thumb/ACQ6nCt3NrNBKkOvWYFxtn6D3d4JLRoKCFZKz5nsDSSqCHsUOtIiUQIcO_HB4nRPBj3wuqbOtYShhCCHCx6IWoXI0KrGdyWdxT344SNP8_HSojpM1oBt1_hFeF5p_KDV3YMAKmlJcT9Hbg9vOLFMjb5VZV-zAJBVRbWyIqAjrwDEvsmS0t-FQJvf20_4l4p--I5vf82eoukry2mGO1lO5dUviJZKvQu_Nka7wHZcHSc7K4fbGgsYaWiOkRjvHGvnzj973ekOtM7EVwtsvG9N5lkP8n5hzV_r0GfsJSXvOeOtUi0DiOFH-wP6a_QXchcXJnihFC6ZwOWpmB42JM-X4n10KWi1NWu8ufxEMdi6la51jA/p.jpeg">
+    </p></div><img class="img" src="https://uc25d6bcb92352464e91f4ce4a21.previews.dropboxusercontent.com/p/thumb/ACQ6nCt3NrNBKkOvWYFxtn6D3d4JLRoKCFZKz5nsDSSqCHsUOtIiUQIcO_HB4nRPBj3wuqbOtYShhCCHCx6IWoXI0KrGdyWdxT344SNP8_HSojpM1oBt1_hFeF5p_KDV3YMAKmlJcT9Hbg9vOLFMjb5VZV-zAJBVRbWyIqAjrwDEvsmS0t-FQJvf20_4l4p--I5vf82eoukry2mGO1lO5dUviJZKvQu_Nka7wHZcHSc7K4fbGgsYaWiOkRjvHGvnzj973ekOtM7EVwtsvG9N5lkP8n5hzV_r0GfsJSXvOeOtUi0DiOFH-wP6a_QXchcXJnihFC6ZwOWpmB42JM-X4n10KWi1NWu8ufxEMdi6la51jA/p.jpeg"><div class="back">
+  
     <h2 id="story">Történetünk</h2>
     <h3>Bevezető</h3>
     <p>A SIRIK, Magyarország legnagyobb kapacitású integrációs központja 2029-ben az Emberi erőforrások minisztériumának felkérésre jött létre. Ebben az évben ért az ország a nemzeti szuverenitás visszaállításának utolsó szakaszához, és teljes függetlenségének kivívásával párhuzamosan vált egyre erősebbé az a társadalmi igény, hogy a kormányzat központi támogatást nyújtson azoknak, akik segítségre szorulnak identitásuk megszilárdításában és támogassa őket abban, hogy megtalálják a helyüket a közösen létrehozott új rendben.<br><br>
@@ -334,7 +358,7 @@ Az intézeti tevékenység folyamatos bővítésének jegyében vált akkreditá
  “A nemzeti identitás intenzív megélése minden magyar állampolgártól elvárható, az ezt elősegítő terápia igénybevétele önkéntes alapon történik, míg a megfelelő támogatás a teljes nemzet felelőssége.” – ezekkel a szavakkal nyitotta meg az Emberi erőforrások Minisztere az intézményt, és Dr. Steinmetz Imre ebben a szellemiségben vezette az intézetet 2033. novemberében bekövetkezett haláláig. 2033. decemberében az intézet vezetését Dr. Steinmetz korábbi helyettese, Dr. Fehér Endre vette át és az intézet neve 2034. januárjától Steinmetz Imre Rehabilitációs és Integrációs Központra változott.</p>
     <h3>Az út előre visz</h3>
     <p>A 2034-es évben az intézet minden eddiginél több bentlakóval folytatja tovább működését, mivel felújítási mukálatok befejeztével immár 300 főt tud fogadni és intenzív képzésben részesíteni. Ebben az évben fogja az Emberi Erőforrások Minisztériumának Kuratóriuma először odaítélni a Steinmetz Imre Díjat, melyben olyan személyek részesülhetnek, akik az oktatás és nevelés területén kiemelkedő, a nemzet fejlődődését szolgáló, rendkívüli és áldozatos munkát végeznek.</p>
-    </div><div class="back"><img class="img" src="https://uc721f3f86e7cfa785eca4021786.previews.dropboxusercontent.com/p/thumb/ACQbv9tpqfK-nAWHtcg88ZIkigMds0Dj_ENkqT3BuTnpg_gT7kiMdKH-hh4ZsIBiYzU9G8tfo9tA15zqnzk35blqyZqPzNK1RtShJNTDkVflHLMzqbPfgGu9zfkAWbB9Nw6--PLg36aX1pyU-wMURCFj_8zxgybeKwUtjCDvto6tb3DylX76yn0wMMpAO9tMPtRPQYyLM-sHQsDW9Zrc9_kTru2to8bYgBXX2A-r_uLqshNEMsObaeXB-4Mh3gri-u_sbaJiMvTrVjkUE1Y9lZASfFG0QpVWpzawbB43ePd33Cc2C6uTqUBX0e9ZtIvLAYd3jQMQO8lSWMwcmWMBP_DwqfBfIwhYQEZhXQR4Mju1Nw/p.jpeg">
+    </div><img class="img" src="https://uc721f3f86e7cfa785eca4021786.previews.dropboxusercontent.com/p/thumb/ACQbv9tpqfK-nAWHtcg88ZIkigMds0Dj_ENkqT3BuTnpg_gT7kiMdKH-hh4ZsIBiYzU9G8tfo9tA15zqnzk35blqyZqPzNK1RtShJNTDkVflHLMzqbPfgGu9zfkAWbB9Nw6--PLg36aX1pyU-wMURCFj_8zxgybeKwUtjCDvto6tb3DylX76yn0wMMpAO9tMPtRPQYyLM-sHQsDW9Zrc9_kTru2to8bYgBXX2A-r_uLqshNEMsObaeXB-4Mh3gri-u_sbaJiMvTrVjkUE1Y9lZASfFG0QpVWpzawbB43ePd33Cc2C6uTqUBX0e9ZtIvLAYd3jQMQO8lSWMwcmWMBP_DwqfBfIwhYQEZhXQR4Mju1Nw/p.jpeg"><div class="back">
   <h2 id="dr">Dr. Steinmetz Imre</h2>
     <p>A SIRIK az összmagyarság érdekei szolgálatában tevékenykedő, független intézmény, a magyarországi integrációs erőfeszítések zászlóshajója. A Központ alapítója, a szakmai közösség létrehozója és a SIRIK-ben akalmazott hiánypótló és formabontó módszer kidolgzója Prof. Dr. Steinmetz Imre, Akadémiai Aranyéremmel kitüntetett pszichiáter, pszichoterapeuta, kutató, közösségépítő. </p>
     <h3>Élete és munkássága</h3>
@@ -351,7 +375,7 @@ Az intézményben rehabilitált nagykorúvá váló fiataloknak Dr. Steinmetz me
 A legutoljára megnyíló, hetedik intézet, Celldömölkön 2028-ban kezdte meg működését. Ebben az évben kapott megbízást Dr. Steinmetz arra, hogy létrehozzon egy fiatal felnőtteket fogadó intézetet Budapesten, a Nemzeti Rehabilitációs és Integrációs Központot, melyben kiemelt politikai jelentőségű tevékenység vette kezdetét 2029-ben. A módszert Dr. Steinmetz a fővárosi intézetben kisebb, de lényegi módosításokkal alkalmazta, tekintettel arra, hogy az újfajta populáció kiindulási pozíciója és lehetőségei eltértek a korábbi beteganyagétól. Az első években kontroll-csoportos kutatás segítségével vizsgálta az apróbb változtatások hatását, majd 2032-ben történt meg a módszer publikált, statisztikailag alátámasztott véglegesítése. A nemzetközileg elismert módszer kidolgozásáért a mester ugyanebben az évben kapta meg a Kárpát-medencei Hazafi díjat és 2033-ban Akadémiai Aranyéremmel tüntették ki.<br><br>
 Dr. Steinmetznél röviddel az intézet megnyitása után tüdőrákot diagnosztizáltak. Betegségét, amíg lehetett, titkolta az intézet dolgozói és bentlakói előtt, 2033 novemberében hunyt el. 2034-ben fogja az Emberi Erőforrások Minisztériumának Kuratóriuma először odaítélni a Dr. Steinmetz Imre Díjat, melyben olyan személyek részesülhetnek, akik az oktatás és nevelés területén kiemelkedő, a nemzet fejlődődését szolgáló, rendkívüli és áldozatos munkát végeznek.
 </p>
-    </div><div class="back"><img class="img" src="https://uc08248def331cc171f4ae3c512c.previews.dropboxusercontent.com/p/thumb/ACSrZEk1H8sWcrZIG9dMnTqoZWt85KyxFGkyFyEcCFgZlKkOyVCJOMeN07nc8U7N9ooRKyBAxQSLbsp93N90ORUWJDTEoxffd5TPJctbg3mxxkYQ5UVp5ZTWy-CMODLSc3SWXY5w8rrbh40jSxOm4mnXGerphcPiiZ4WAgu2v81OLvo9U1KJZI9ajRftBz2QJ59a5BmZ2xNdYezzBYC3lQ33YXpzqvaGt3K91YbhayesOz91OfSulPink4JqmCzuh03vn7Ym7xFxY2FEOUD2AFvynMxumgYgzvfUVKYwUl5NkdJi5oY5k0ARJs6Mf4PY3VEwuIbCLjnDd5mCaZLnHB1PmXIb1VQTFkF-lI2CdDkxqw/p.jpeg">
+    </div><img class="img" src="https://uc08248def331cc171f4ae3c512c.previews.dropboxusercontent.com/p/thumb/ACSrZEk1H8sWcrZIG9dMnTqoZWt85KyxFGkyFyEcCFgZlKkOyVCJOMeN07nc8U7N9ooRKyBAxQSLbsp93N90ORUWJDTEoxffd5TPJctbg3mxxkYQ5UVp5ZTWy-CMODLSc3SWXY5w8rrbh40jSxOm4mnXGerphcPiiZ4WAgu2v81OLvo9U1KJZI9ajRftBz2QJ59a5BmZ2xNdYezzBYC3lQ33YXpzqvaGt3K91YbhayesOz91OfSulPink4JqmCzuh03vn7Ym7xFxY2FEOUD2AFvynMxumgYgzvfUVKYwUl5NkdJi5oY5k0ARJs6Mf4PY3VEwuIbCLjnDd5mCaZLnHB1PmXIb1VQTFkF-lI2CdDkxqw/p.jpeg"><div class="back">
   <h2 id="methods">Módszereink</h2>
     <h3>Terápiás célok és a módszer áttekintése</h3>
     <p>Az intézetben zajló terápia célja, hogy felkészítse a bentlakókat a stabil családi környezet kialakítására, segítse őket a harmonikus családi működéshez szükséges szerepek elsajátításában és eszközöket adjon nekik ahhoz, hogy megtalálják helyüket a közösségben, a nemzeti egységben és konstruktívan járuljanak hozzá annak működéséhez. Ehhez az egyik legfontosabb módszertani eszköz a viselkedéses és gondolkodási sémák kulturális sajátosságainkhoz alkalmazkodó átalakítása, azoknak a központi fogalmaknak, értékeknek a megismertetése és elsajátításuk elősegítése, melyek köré nemzeti közösségünk működése szerveződik, valamint annak tudatosítása, hogy az egyén döntései milyen módon hatnak vissza ennek a közösségnek működésére. A képzés segít, hogy a bentlakó megtanulja helyesen értelmezni a személyközi kommunikációs helyzeteket és tágabb környezete történéseit, és a helyes értelmezés alapján saját maga és a társadalom számára előremutató döntéseket hozzon.</p>
@@ -361,7 +385,7 @@ Dr. Steinmetznél röviddel az intézet megnyitása után tüdőrákot diagnoszt
     <p>A terápia egész napos elfoglaltságot jelent, a délelőtti foglalkozásokon a sportterápiát követően a bentlakók a nyelvi, történelmi, etikai modul keretében különböző szintű csoportokban tanulnak, délután kerül sor a művészetterápiás foglalkozásokra és azokra a kiscsoportos foglalkozásokra, melyek keretében helyzetgyakorlatokon és ezek közös kiértékelésén keresztül történik meg a viselkedési sémák felülírása, korrigálása. A bentlakók délelőtti és délutáni foglalkozásokon is folyamatosan visszajelzéseket kapnak a foglakozásvezetőktől a viselkedésükkel, kommunikációjuk hangvételével, tartalmával kapcsolatban, ez a folyamatos visszacsatolás, korrekció központi eleme az intézet módszerének. Heti rendszerességű az orvosi és pszichés állapotfelmérés, a bentlakók előrehaladásának kiscsoportokban történő  kiértékelése és kívánatos fejlődési irányuk meghatározása.<br><br>
 A hétvégi szabadon válaszható tevékenységek, vezetett, közös beszélgetések ápolókkal, meghívott vendégekkel segítik a bentlakókat abban, hogy modelleket találjanak, és gyakorolják azt a pozitív hangvételű, konstruktív kommunikációt, ami áthatja az egész intézet működését.
 </p>
-    </div><div class="back"><img class="img" src="https://uc0de6c61add8bc93044c11da3a1.previews.dropboxusercontent.com/p/thumb/ACTRM4nlDa80QffkR0E8Gl3rCDev6VgBgH6ibUJkD75195glzofSYtsY-yYlk1KduIq3I9kkcfCb9c97Yl0W62NTJNdPNVgeuF8iI5nBifBZp6EG6mRf3KIU6Mt1ZlfNga6W6ZIxlZbfGuMHkshLD66oFWauHKHF2o7N6yGQqKGI3KicSwzETiP0GvW7kAM-cKj7GImIC8wYUIZ-n0bTR_XdWeV8eAWNsdcn-N6KpMDMUXULo4WfM00lI0ob6Vr0ENZX180Z8-iXtkW6vH6avjs4juD8BUPhXUtb6V_3NrDnCp_wr-8fC1cPsPaBQf-Y8jX8_fb9ihgUibQjopqp-h347N5pt5Q_sWuDc7ZSC7zgZA/p.jpeg">
+    </div><img class="img" src="https://uc0de6c61add8bc93044c11da3a1.previews.dropboxusercontent.com/p/thumb/ACTRM4nlDa80QffkR0E8Gl3rCDev6VgBgH6ibUJkD75195glzofSYtsY-yYlk1KduIq3I9kkcfCb9c97Yl0W62NTJNdPNVgeuF8iI5nBifBZp6EG6mRf3KIU6Mt1ZlfNga6W6ZIxlZbfGuMHkshLD66oFWauHKHF2o7N6yGQqKGI3KicSwzETiP0GvW7kAM-cKj7GImIC8wYUIZ-n0bTR_XdWeV8eAWNsdcn-N6KpMDMUXULo4WfM00lI0ob6Vr0ENZX180Z8-iXtkW6vH6avjs4juD8BUPhXUtb6V_3NrDnCp_wr-8fC1cPsPaBQf-Y8jX8_fb9ihgUibQjopqp-h347N5pt5Q_sWuDc7ZSC7zgZA/p.jpeg"><div class="back">
   <h2 id="log">Belépés menete és támogatások igénybevétele</h2>
     <p>A SIRIK egyre bővülő kapacitással és változatlan szakmai színvonalű képzéssel várja az önként jelentkezőket. Kérjük, jelentkezés előtt tekintsék át az alábbi információkat, illetve további kérdések esetén állunk szíves rendelkezésükre a SIRIK-fon ingyenesen igénybevehető, élőhangos tájékoztatási rendszerén keresztül.</p>
     <h3>Belépés menete</h3>
@@ -370,7 +394,7 @@ A képzés megkezdése és elvégzése önkéntes, a képzés folyamata a bentla
 A folyamatos túljelentkezés miatt kérjük, belépési szándékukat a kívánt belépési dátum megjelölésével előre jelezzék az Ügyfélkapun leadott, illetve a bekesziget2034@gmail.hu e-mail címre is megküldött 2031/728. sz. EÜ Nyomtatványon.<br><br>
 A Nyomtatványon megjelölt életkörülmények, jövedelem, lakhely, családi állapot figyelembevételével a jelentkezők behívása folyamatosan történik. A munkáltatóval történő egyeztetés a belépési szándék megerősítése után történik. Kérjük, a nyomtatványon az átfogó adatszolgáltatási platformra regisztrált személyazonosító okmány (személyi igazolvány vagy jogosítvány) számát adják meg, mivel a felvétel előfeltétele a biometrikus adatok, illetve a korábbi határátlépések leellenőrzése.
 </p>
-    </div><div class="back"><img class="img" src="https://uca06e675be0c3cb286de6502769.previews.dropboxusercontent.com/p/thumb/ACT6cJ63t4CQz_L-PdMhkaHRrlzza736nGPmf5ylKmHLV6V28rPojrf9cVpuarj38QtqLgDiFPgDsRVqlOyIKXKgZ5yDsguYFEsVKkIFX_WAqtsLzXvmXPBlnnTkUBBu2SuBNCaqrXcg3w5kmH6oaV6ajOqdRY1T4lm6OfjnqHdqMUo37P7wsPDYzGjErOx24W46kQ0VC2lE7LyoU_3LSDgcg36Q2ks8wT2HSDxq1mm6JBT3RPFGzl28wVvDTWDEgBFsap6tiWhiVUWuTNkJ1zXh841PfvygBNZH85Cg2lifcdYcfSovn1mxa7jj3vwh5C7wcP4QNOgvevjAWkUcCTnQbm8D7T402wfRcOJUxXh5aA/p.jpeg">
+    </div><img class="img" src="https://uca06e675be0c3cb286de6502769.previews.dropboxusercontent.com/p/thumb/ACT6cJ63t4CQz_L-PdMhkaHRrlzza736nGPmf5ylKmHLV6V28rPojrf9cVpuarj38QtqLgDiFPgDsRVqlOyIKXKgZ5yDsguYFEsVKkIFX_WAqtsLzXvmXPBlnnTkUBBu2SuBNCaqrXcg3w5kmH6oaV6ajOqdRY1T4lm6OfjnqHdqMUo37P7wsPDYzGjErOx24W46kQ0VC2lE7LyoU_3LSDgcg36Q2ks8wT2HSDxq1mm6JBT3RPFGzl28wVvDTWDEgBFsap6tiWhiVUWuTNkJ1zXh841PfvygBNZH85Cg2lifcdYcfSovn1mxa7jj3vwh5C7wcP4QNOgvevjAWkUcCTnQbm8D7T402wfRcOJUxXh5aA/p.jpeg"><div class="back">
   <h2 id="sponsor">Támogatások</h2>
     <p>A SIRIK-ben elvégzett képzés az alábbi módon illeszkededik a Nemzeti Támogatások Rendszeréhez az 526/2028. sz. Kormányrendelet értelmében:<br><br>
 Családtagok felhasználható kreditei az intézetben megkezdett terápiás folyamat megkezdésekor<br><br>
@@ -393,7 +417,7 @@ Nagykorú gyermekek esetén gyermekenként 5 kredit, mely szabadon felhasználha
 A kreditek és jogosultságok jóváírásának feltétele az igénylőlap Ügyfélkapun keresztül történő leadása a terápia megkezdését, illetve a sikeres vizsgát követő 45 napon belül. A kreditek jóváírása a felülvizsgálatot és jóváhagyást követően 30 napon belül történik meg.<br><br>
 Egy gyermeket nevelők, egyedülálló szülők, illetve gyermektelen nagykorúak a fenti támogatásokat nem vehetik igénybe. Amennyiben a képzés lezárultát követően a képzést elvégző személy 45 napon belül a 153/2026. sz. Kormányrendelet értelmében legalább két gyermek házasságon belüli világra hozatalát vállalja, a fenti támogatások a második gyermek megfoganását igazoló vizsgálatot követően vehetők igénybe.
 </p>
-    </div><div class="back"><img class="img" src="https://ucdded17c693884f30d09ba10411.previews.dropboxusercontent.com/p/thumb/ACQyUciDYU8XyvZXWDCXeGoYwQqCk8w9ZzZnCovNkwkMAOodkrS8vnD3tmBp72Gc3KqoVRwB9igNuL8AZleX4G1QnkCf2njSlMB5Xtzvil_Kr4EUd24fpPU8G775PaXfLoO863yMOLPsp4pQY5v4PX_dpw80jCltdvl4ty2_Dnf671UUh1f3GcV_Muh06yvbClqqHFHvGanHLU_ZU-iTuXtlSpsq0Gaci4zKSXGxTpWYqYEvrrbBinVs1jYdWizTB047-rEmqlTeJTC5dRMrGxROAxS6EXbISFtp0ehX_IJK5iDvV9vpN24mbA3VKDeqA-mkPOzQKUm_NmAvn9kq6J1uhukXN03PCHVmnhgmdiFxzg/p.jpeg">
+    </div><img class="img" src="https://ucdded17c693884f30d09ba10411.previews.dropboxusercontent.com/p/thumb/ACQyUciDYU8XyvZXWDCXeGoYwQqCk8w9ZzZnCovNkwkMAOodkrS8vnD3tmBp72Gc3KqoVRwB9igNuL8AZleX4G1QnkCf2njSlMB5Xtzvil_Kr4EUd24fpPU8G775PaXfLoO863yMOLPsp4pQY5v4PX_dpw80jCltdvl4ty2_Dnf671UUh1f3GcV_Muh06yvbClqqHFHvGanHLU_ZU-iTuXtlSpsq0Gaci4zKSXGxTpWYqYEvrrbBinVs1jYdWizTB047-rEmqlTeJTC5dRMrGxROAxS6EXbISFtp0ehX_IJK5iDvV9vpN24mbA3VKDeqA-mkPOzQKUm_NmAvn9kq6J1uhukXN03PCHVmnhgmdiFxzg/p.jpeg"><div class="back">
   <h2 id="RIK">RIK Kiadó</h2>
   <p>Aktuálisan rendelhető kiadványaink<br><br></p><h6>
                                        	Prof. Dr. Steinmetz Imre: A szabadság nyelve<br><br>
@@ -411,14 +435,14 @@ Egy gyermeket nevelők, egyedülálló szülők, illetve gyermektelen nagykorúa
   Előkészítés alatt:<br><br></p><h6>
 Dr. Steinmetz Imréné: Belső iránytű. Kézikönyv ápolók és segédszemélyzet számára
   </h6>
-    </div><div class="back"><img class="img" src="https://uce5239d10476683ce131347c5a5.previews.dropboxusercontent.com/p/thumb/ACSzx34uEVg1PkLUpiemZi9s-4D9VkmV7N55Hj8WZ83cX1BKVQv_ahnScvCYWRKqfDd6lDzqdMIigLBTWyFVxySNIfjyv52kC9i0ktP_DxChBQQfjhctMWzPtjP-BrmnAC6GfmjqZctdB3KzvsvxkYFjgFQWVmccIPOywIT3uCeMBuj4B3mKEFdz12L1JDmxft91bRojCwPE7ai2JyyyYhhBhsCBjb0IY31T8AL1JnAZMBnY0AqFu7A8ptncKqzGjQRBHLAwt2gZ2zpfMgcNC7eFEiRPIuPZJh9KMGuwIB_ufokgIFIUgx9xEOmt6mpgipQB0ocViRsUVGbC6wO6p2NJkqdqHr6y-wQuVJiceewEig/p.jpeg">
+    </div><img class="img" src="https://uce5239d10476683ce131347c5a5.previews.dropboxusercontent.com/p/thumb/ACSzx34uEVg1PkLUpiemZi9s-4D9VkmV7N55Hj8WZ83cX1BKVQv_ahnScvCYWRKqfDd6lDzqdMIigLBTWyFVxySNIfjyv52kC9i0ktP_DxChBQQfjhctMWzPtjP-BrmnAC6GfmjqZctdB3KzvsvxkYFjgFQWVmccIPOywIT3uCeMBuj4B3mKEFdz12L1JDmxft91bRojCwPE7ai2JyyyYhhBhsCBjb0IY31T8AL1JnAZMBnY0AqFu7A8ptncKqzGjQRBHLAwt2gZ2zpfMgcNC7eFEiRPIuPZJh9KMGuwIB_ufokgIFIUgx9xEOmt6mpgipQB0ocViRsUVGbC6wO6p2NJkqdqHr6y-wQuVJiceewEig/p.jpeg"><div class="back">
   <h2 id="donate">Adományok</h2>
     <p>Kedves Támogatónk!<br><br>
 Intézetünk célja, hogy mindenkinek, aki segítséget kér, lehetőséget adjunk a képzés elvégzésére és arra, hogy a közösség, a nemzet és saját jólétét szem előtt tartva megtalálja helyét az újjáalakuló, független Magyarországon.<br><br>
 Köszönjük, ha támogatja Intézetünket és vállaljuk, hogy minden hozzánk érkező támogatást a bentlakók és a képzés fejlesztésére használunk föl.<br><br>
 Amennyiben akár magányszemélyként, akár cégként támogatást kíván nyújtani, kérjük, vegye fel a kapcsolatot Gyenes Ágnes főápolóval a bekesziget2034@gmail.com e-mail címen.
 </p>
-    </div><div class="back, sec"><img class="img" src="https://ucfbca5a3455bd38dd983bd981c4.previews.dropboxusercontent.com/p/thumb/ACQXRqqJusNjQ77eBm6nN0FiFrKxhfXw5TvIr9H8gg-EvsSGTfBc8JAM53QufMlzpuLMze7ZSFWfOsuDfmEj7nCbIbOyxG_NaWGFoeHhfOWx1H5p2hJqZL73Uq4U-gULiWacvOJAidjZAUODvJ11uEA4BIarbUaZ02j1tJVsqA5HlrSiF9qTq2KG6p3tARnztCwcDUwJsgt7EkEKD6fyWcm9KKiAWYweo-R_u734XvsuVk0kM8y6xhILKNXivCTORPTspgsLlT-Wm0nri3_tAGNnGXDFOHcqDjzbVLO3MeCgOFaRUgzrPSnKxVChcKKlprkgYV_zyyCUGDqrWIuRFywbSNb4hKaDWDBBFAjYNfY7tQ/p.jpeg">
+    </div><img class="img" src="https://ucfbca5a3455bd38dd983bd981c4.previews.dropboxusercontent.com/p/thumb/ACQXRqqJusNjQ77eBm6nN0FiFrKxhfXw5TvIr9H8gg-EvsSGTfBc8JAM53QufMlzpuLMze7ZSFWfOsuDfmEj7nCbIbOyxG_NaWGFoeHhfOWx1H5p2hJqZL73Uq4U-gULiWacvOJAidjZAUODvJ11uEA4BIarbUaZ02j1tJVsqA5HlrSiF9qTq2KG6p3tARnztCwcDUwJsgt7EkEKD6fyWcm9KKiAWYweo-R_u734XvsuVk0kM8y6xhILKNXivCTORPTspgsLlT-Wm0nri3_tAGNnGXDFOHcqDjzbVLO3MeCgOFaRUgzrPSnKxVChcKKlprkgYV_zyyCUGDqrWIuRFywbSNb4hKaDWDBBFAjYNfY7tQ/p.jpeg"><div class="back, sec">
   <h2 id="SIRIK">SIRIK-fon</h2>
     <p>A SIRIK-fon azért jött létre, hogy naprakész tájékoztatást adjon a belépés menetéről, illetve választ adjon bármilyen kérdésre az intézet működésével, és a képzés részleteivel kapcsolatban, érthetően, egyéni igényekre reagálva. <br><br>
 Az operátorokkal történő, egyéni beszélgetésekre minden nap 10 és 16 óra között kerül sor, 45 perces időkeretben. Regisztrálni a bekesziget2034@gmail.com e-mail címen lehet, ahol név, életkor, jelenlegi családi állapot, folgalkozás és a feltenni kívánt kérdések előzetes megadásával foglalható időpont.
