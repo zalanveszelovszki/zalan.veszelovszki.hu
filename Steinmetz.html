@@ -92,7 +92,7 @@ table {
       font-size: 80px;
       font-family: 'Lemon/Milk', sans-serif;
     }
-    footer {
+    .footer {
       background: url("https://dochub.com/vzalcsi/pqb0g5YRqv3bq2DKJ2nx67/lablec-hatter-jpg");
       background-repeat: no-repeat;
       background-size: cover;
@@ -149,6 +149,7 @@ table {
       display: block;
       padding-bottom: 30px;
       padding-top: 30px;
+      border-bottom: solid 1px grey;
     }
     a, a:visited, a:hover, a:active {
       color: white;
@@ -167,14 +168,13 @@ table {
       text-align: left;
     }
     .head {
-      position: fixed;
       background-color: #3b444d;
       width: 100%;
+      height: 180px;
       padding-bottom: 10px;
       padding-top: 0px;
-    }
-    .list {
-      padding-top: 200px;
+      border-bottom: solid 1px black;
+      background: linear-gradient(to bottom, #171b1e 0%, #3b444d 100%);
     }
     .scroll:hover {
       font-weight: bold;
@@ -186,6 +186,9 @@ table {
       h1 {
       font-size: 20px;
     }
+      .head {
+        height: 100px;
+      }
     h2 {
       padding-top: 100px;
       padding-bottom: 50px;
@@ -225,9 +228,6 @@ table {
     .sec {
       padding-bottom: 150px;
     }
-    .list {
-      padding-top: 120px;
-      }
     .end {
       font-size: 15px;
       line-height: 25px;
@@ -247,10 +247,9 @@ table {
     }
   </style>
 <body>
-<header id="callout" data-closable>
-  <a href="#callout" class="head"><div class="head">
+<header id="callout" data-closable><div class="head">
   <img class="logo" src="https://uc4ae59283a8c84eb3e0361a29a3.previews.dropboxusercontent.com/p/thumb/ACTV0FKzohJjYfMAF1fJSPVV0zsxf_A8hT4tqHv_qtHhADStwK7XNaxvs6hXIJ5rM1HPM_PSjglBoHdK-oQ3Hh19xvkaxe3IDXzCDQEl75B7_U5CVHEBbNFaJ589UVO1L1UN_XqzNkYJtZhYVaEY8QhG50BTxLur-ZwHQD3HtYtqa-3zGMwNtfPkFaeOQIT-kVhhdPgh50zTaNROzY-uGRy2yqgnCMu15o5aaAnlER4R00Q5oME_RD6-UfMSB_S1knHi4K4pTEHp-x_8XF93LcvaRQINPVTx0hbAzpaxFDoTp3zQAlb7MeN77ixzEjt7IUQfouEialDTicMqVC0W0xLp/p.png">
-    <span onclick="this.parentElement.style.display='none'" class="button"><h3>&times;</h3></span></div></a>
+    <span onclick="this.parentElement.style.display='none'" class="button"><h3>&times;</h3></span></div>
   <div class="list">
     <a href="#int" class="scroll">Bemutatkozás</a>
     <a href="#future" class="scroll">Jövőkép</a>
@@ -377,7 +376,7 @@ Amennyiben akár magányszemélyként, akár cégként támogatást kíván nyú
     <p>A SIRIK-fon azért jött létre, hogy naprakész tájékoztatást adjon a belépés menetéről, illetve választ adjon bármilyen kérdésre az intézet működésével, és a képzés részleteivel kapcsolatban, érthetően, egyéni igényekre reagálva. <br><br>
 Az operátorokkal történő, egyéni beszélgetésekre minden nap 10 és 16 óra között kerül sor, 45 perces időkeretben. Regisztrálni a bekesziget2034@gmail.com e-mail címen lehet, ahol név, életkor, jelenlegi családi állapot, folgalkozás és a feltenni kívánt kérdések előzetes megadásával foglalható időpont.
     </p></div>
-  <footer><h4>KAPCSOLAT<br><br></h4>
+  <div class="footer"><h4>KAPCSOLAT<br><br></h4>
     <p class="end">
           	Steinmetz Imre Rehabilitációs és Integrációs Központ<br>
           	1051 Budapest, Nádor utca 15.<br>
@@ -393,6 +392,6 @@ Az operátorokkal történő, egyéni beszélgetésekre minden nap 10 és 16 ór
 Emberi Erőforrás Támogatáskezelő<br>
 Miniszterelnökség<br>
 Magyar Ifjúsági Értekezlet (MIÉRT)<br>
-    Polgári Magyarországért Alapítvány</p><h5>...</h5></footer>
+    Polgári Magyarországért Alapítvány</p><h5>...</h5></div>
 </body>
 </html>
