@@ -12,16 +12,21 @@
             text-align: center;
             background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
             margin: 0;
-            padding: 20px;
-            min-height: 100vh;
+            padding-left: 20px;
+            padding-right: 20px;
+            max-height: 100vh;
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: pink;"><text y="20">🌈</text></svg>'), auto;
         }
+        html {
+          max-height:100vh;
+        }
         h1 {
             color: #ff69b4;
-            font-size: 72px;
+            font-size: 50px;
             margin-bottom: 20px;
+            margin-top: 10px;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.3),
                          0 0 20px #ff69b4,
                          0 0 40px #ff1493;
@@ -45,7 +50,7 @@
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 48px;
+            font-size: 40px;
             font-weight: bold;
             animation: shimmer 3s linear infinite;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
@@ -94,6 +99,7 @@
             right: -20px;
             transform: rotate(30deg);
             animation: float 3s ease-in-out infinite reverse;
+            height: 100%;
         }
         .unicorn {
             font-size: 120px;
